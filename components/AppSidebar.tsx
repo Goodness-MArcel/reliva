@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Compass,
   Bookmark,
@@ -37,6 +37,7 @@ const NAV_ITEMS = [
 
 export default function AppSidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { data: session } = authClient.useSession();
   const [showSignOutModal, setShowSignOutModal] = useState(false);
 
@@ -76,18 +77,16 @@ export default function AppSidebar() {
                   return (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton
-                        asChild
                         isActive={isActive}
-                        className={`rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
+                        onClick={() => router.push(item.url)}
+                        className={`rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors cursor-pointer ${
                           isActive
                             ? "bg-slate-950 text-white hover:bg-slate-900 hover:text-white"
                             : "text-slate-600 hover:bg-[#FAF9F5] hover:text-slate-950"
                         }`}
                       >
-                        <Link href={item.url} className="flex items-center gap-3">
-                          <item.icon className="w-4 h-4 shrink-0" />
-                          <span>{item.title}</span>
-                        </Link>
+                        <item.icon className="w-4 h-4 shrink-0" />
+                        <span>{item.title}</span>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
                   );
