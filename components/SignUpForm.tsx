@@ -50,19 +50,19 @@ export default function SignUpForm() {
       return;
     }
 
-    // Redirect to homepage after successful registration
+    // Redirect to dashboard after successful registration
     router.push("/dashboard");
     router.refresh();
   };
 
   return (
-    <div className="w-full max-w-[440px] bg-white border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+    <div className="w-full max-w-[440px] bg-white border border-navy/15 rounded-3xl p-8 sm:p-10 shadow-[0_4px_20px_rgba(11,37,69,0.03)]">
       {/* Header */}
       <div className="text-center mb-7">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy">
           Create an account
         </h1>
-        <p className="text-sm text-slate-500 mt-2">
+        <p className="text-sm text-charcoal/70 mt-2">
           Get personalized visa rules based on your passport.
         </p>
       </div>
@@ -80,7 +80,7 @@ export default function SignUpForm() {
         <div>
           <label
             htmlFor="fullName"
-            className="block text-xs font-medium text-slate-700 mb-1.5 ml-1"
+            className="block text-xs font-medium text-charcoal mb-1.5 ml-1"
           >
             Full name
           </label>
@@ -91,7 +91,7 @@ export default function SignUpForm() {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             placeholder="Alex Rivera"
-            className="w-full bg-white border border-slate-200/90 rounded-full px-5 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all"
+            className="w-full bg-white border border-navy/15 rounded-full px-5 py-3 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all"
           />
         </div>
 
@@ -99,7 +99,7 @@ export default function SignUpForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-slate-700 mb-1.5 ml-1"
+            className="block text-xs font-medium text-charcoal mb-1.5 ml-1"
           >
             Email address
           </label>
@@ -110,7 +110,7 @@ export default function SignUpForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="w-full bg-white border border-slate-200/90 rounded-full px-5 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all"
+            className="w-full bg-white border border-navy/15 rounded-full px-5 py-3 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all"
           />
         </div>
 
@@ -118,7 +118,7 @@ export default function SignUpForm() {
         <div>
           <label
             htmlFor="passport"
-            className="block text-xs font-medium text-slate-700 mb-1.5 ml-1"
+            className="block text-xs font-medium text-charcoal mb-1.5 ml-1"
           >
             Your passport country
           </label>
@@ -128,7 +128,7 @@ export default function SignUpForm() {
               required
               value={passport}
               onChange={(e) => setPassport(e.target.value)}
-              className="w-full appearance-none bg-white border border-slate-200/90 rounded-full px-5 py-3 pr-10 text-sm text-slate-800 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all cursor-pointer"
+              className="w-full appearance-none bg-white border border-navy/15 rounded-full px-5 py-3 pr-10 text-sm text-charcoal focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all cursor-pointer"
             >
               <option value="" disabled>
                 Select your passport...
@@ -147,7 +147,7 @@ export default function SignUpForm() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-4 h-4 text-slate-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              className="w-4 h-4 text-charcoal/50 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
             >
               <path d="m6 9 6 6 6-6" />
             </svg>
@@ -158,7 +158,7 @@ export default function SignUpForm() {
         <div>
           <label
             htmlFor="password"
-            className="block text-xs font-medium text-slate-700 mb-1.5 ml-1"
+            className="block text-xs font-medium text-charcoal mb-1.5 ml-1"
           >
             Password
           </label>
@@ -171,13 +171,13 @@ export default function SignUpForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="At least 8 characters"
-              className="w-full bg-white border border-slate-200/90 rounded-full pl-5 pr-11 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all"
+              className="w-full bg-white border border-navy/15 rounded-full pl-5 pr-11 py-3 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute right-4 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
+              className="absolute right-4 text-charcoal/50 hover:text-navy transition-colors cursor-pointer"
             >
               {showPassword ? (
                 <svg
@@ -217,18 +217,18 @@ export default function SignUpForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full mt-2 bg-slate-950 hover:bg-slate-800 disabled:opacity-60 text-white text-sm font-medium py-3.5 px-6 rounded-full transition-colors cursor-pointer"
+          className="w-full mt-2 bg-navy hover:bg-navy/90 disabled:opacity-60 text-white text-sm font-medium py-3.5 px-6 rounded-full transition-colors cursor-pointer shadow-sm"
         >
           {loading ? "Creating account..." : "Create account"}
         </button>
       </form>
 
       {/* Footer Link */}
-      <p className="text-center text-xs text-slate-500 mt-6">
+      <p className="text-center text-xs text-charcoal/70 mt-6">
         Already have an account?{" "}
         <Link
           href="/signin"
-          className="font-semibold text-slate-900 hover:underline"
+          className="font-semibold text-navy hover:underline"
         >
           Sign in
         </Link>

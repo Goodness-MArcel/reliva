@@ -46,20 +46,19 @@ export default function AppSidebar() {
 
   return (
     <>
-      <Sidebar className="border-r border-slate-200/80 bg-white">
+      <Sidebar className="border-r border-navy/10 bg-white">
         {/* Brand Header */}
-        <SidebarHeader className="px-6 py-6 border-b border-slate-100">
+        <SidebarHeader className="px-6 py-6 border-b border-navy/10">
           <Link
             href="/"
-            className="text-2xl font-bold tracking-tight text-slate-950"
+            className="text-2xl font-bold tracking-tight text-navy"
           >
             Reliva
           </Link>
-          <div className="mt-3 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FAF9F5] border border-slate-200/80 w-fit">
-            <Globe className="w-3.5 h-3.5 text-slate-500" />
-            <span className="text-xs font-medium text-slate-700">
-              Passport:{" "}
-              <strong className="text-slate-950">{userPassport}</strong>
+          <div className="mt-3 flex items-center gap-2 px-3 py-1.5 rounded-full bg-ivory border border-gold/30 w-fit">
+            <Globe className="w-3.5 h-3.5 text-gold" />
+            <span className="text-xs font-medium text-charcoal">
+              Passport: <strong className="text-navy">{userPassport}</strong>
             </span>
           </div>
         </SidebarHeader>
@@ -67,7 +66,7 @@ export default function AppSidebar() {
         {/* Navigation Links */}
         <SidebarContent className="px-3 py-4">
           <SidebarGroup>
-            <SidebarGroupLabel className="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 mb-2">
+            <SidebarGroupLabel className="text-xs font-semibold uppercase tracking-wider text-charcoal/60 px-3 mb-2">
               Menu
             </SidebarGroupLabel>
             <SidebarGroupContent>
@@ -81,11 +80,15 @@ export default function AppSidebar() {
                         onClick={() => router.push(item.url)}
                         className={`rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors cursor-pointer ${
                           isActive
-                            ? "bg-slate-950 text-white hover:bg-slate-900 hover:text-white"
-                            : "text-slate-600 hover:bg-[#FAF9F5] hover:text-slate-950"
+                            ? "bg-navy text-white hover:bg-navy/95 hover:text-white"
+                            : "text-charcoal hover:bg-ivory hover:text-navy"
                         }`}
                       >
-                        <item.icon className="w-4 h-4 shrink-0" />
+                        <item.icon
+                          className={`w-4 h-4 shrink-0 ${
+                            isActive ? "text-gold" : "text-charcoal/70"
+                          }`}
+                        />
                         <span>{item.title}</span>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -97,13 +100,13 @@ export default function AppSidebar() {
         </SidebarContent>
 
         {/* User Profile & Sign Out Trigger */}
-        <SidebarFooter className="p-4 border-t border-slate-100">
+        <SidebarFooter className="p-4 border-t border-navy/10">
           <div className="flex items-center justify-between px-2 py-2">
             <div className="truncate pr-2">
-              <p className="text-sm font-semibold text-slate-900 truncate">
+              <p className="text-sm font-semibold text-navy truncate">
                 {session?.user?.name || "Traveler"}
               </p>
-              <p className="text-xs text-slate-400 truncate">
+              <p className="text-xs text-charcoal/70 truncate">
                 {session?.user?.email || ""}
               </p>
             </div>
@@ -111,7 +114,7 @@ export default function AppSidebar() {
               type="button"
               onClick={() => setShowSignOutModal(true)}
               title="Sign out"
-              className="p-2 rounded-full text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
+              className="p-2 rounded-full text-charcoal/60 hover:text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
             >
               <LogOut className="w-4 h-4" />
             </button>

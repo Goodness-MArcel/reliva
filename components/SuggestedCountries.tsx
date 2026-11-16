@@ -42,7 +42,7 @@ const ALL_COUNTRIES = [
 
 export default function SuggestedCountries({
   onSelectCountry,
-  replaceOnRemove = true, // Enabled by default!
+  replaceOnRemove = true,
 }: SuggestedCountriesProps) {
   const [displayedCountries, setDisplayedCountries] = useState<string[]>([
     "Canada",
@@ -61,14 +61,12 @@ export default function SuggestedCountries({
     e: React.MouseEvent,
     countryToRemove: string
   ) => {
-    // Prevent clicking 'x' from filling the search bar
     e.stopPropagation();
 
     const updatedDismissed = [...dismissedCountries, countryToRemove];
     setDismissedCountries(updatedDismissed);
 
     if (replaceOnRemove) {
-      // Find countries that aren't currently showing and haven't been dismissed yet
       const availablePool = ALL_COUNTRIES.filter(
         (c) =>
           !displayedCountries.includes(c) && !updatedDismissed.includes(c)
@@ -84,7 +82,6 @@ export default function SuggestedCountries({
       }
     }
 
-    // If the pool runs out (or replaceOnRemove is false), simply remove the pill
     setDisplayedCountries((prev) =>
       prev.filter((country) => country !== countryToRemove)
     );
@@ -98,16 +95,15 @@ export default function SuggestedCountries({
         <div
           key={country}
           onClick={() => onSelectCountry(country)}
-          className="group flex items-center gap-2 pl-4 pr-3 py-2 rounded-full bg-[#ECEEEF] hover:bg-slate-200/90 text-slate-700 text-sm font-medium transition-all cursor-pointer select-none"
+          className="group flex items-center gap-2 pl-4 pr-3 py-2 rounded-full bg-white/80 hover:bg-white border border-[#0B2545]/10 hover:border-[#C9973E] text-[#444444] hover:text-[#0B2545] text-sm font-medium transition-all cursor-pointer select-none shadow-2xs"
         >
           <span>{country}</span>
 
-          {/* 'x' Remove Button */}
           <button
             type="button"
             onClick={(e) => handleRemoveCountry(e, country)}
             aria-label={`Remove ${country}`}
-            className="flex items-center justify-center w-4 h-4 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-300/70 transition-colors cursor-pointer"
+            className="flex items-center justify-center w-4 h-4 rounded-full text-[#444444]/50 hover:text-[#0B2545] hover:bg-[#F3F1EC] transition-colors cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

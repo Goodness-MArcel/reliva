@@ -34,13 +34,13 @@ export default function SignInForm() {
   };
 
   return (
-    <div className="w-full max-w-[420px] bg-white border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+    <div className="w-full max-w-[420px] bg-white border border-navy/15 rounded-3xl p-8 sm:p-10 shadow-[0_4px_20px_rgba(11,37,69,0.03)]">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy">
           Welcome back
         </h1>
-        <p className="text-sm text-slate-500 mt-2">
+        <p className="text-sm text-charcoal/70 mt-2">
           Sign in to save countries and track visa updates.
         </p>
       </div>
@@ -57,7 +57,7 @@ export default function SignInForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-slate-700 mb-1.5 ml-1"
+            className="block text-xs font-medium text-charcoal mb-1.5 ml-1"
           >
             Email address
           </label>
@@ -68,7 +68,7 @@ export default function SignInForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="w-full bg-white border border-slate-200/90 rounded-full px-5 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all"
+            className="w-full bg-white border border-navy/15 rounded-full px-5 py-3 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all"
           />
         </div>
 
@@ -76,13 +76,13 @@ export default function SignInForm() {
           <div className="flex items-center justify-between mb-1.5 ml-1 mr-1">
             <label
               htmlFor="password"
-              className="block text-xs font-medium text-slate-700"
+              className="block text-xs font-medium text-charcoal"
             >
               Password
             </label>
             <Link
               href="/forgot-password"
-              className="text-xs text-slate-400 hover:text-slate-700 transition-colors"
+              className="text-xs text-charcoal/60 hover:text-navy transition-colors"
             >
               Forgot?
             </Link>
@@ -95,13 +95,13 @@ export default function SignInForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full bg-white border border-slate-200/90 rounded-full pl-5 pr-11 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200/50 transition-all"
+              className="w-full bg-white border border-navy/15 rounded-full pl-5 pr-11 py-3 text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute right-4 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
+              className="absolute right-4 text-charcoal/50 hover:text-navy transition-colors cursor-pointer"
             >
               {showPassword ? (
                 <svg
@@ -141,18 +141,18 @@ export default function SignInForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full mt-2 bg-slate-950 hover:bg-slate-800 disabled:opacity-60 text-white text-sm font-medium py-3.5 px-6 rounded-full transition-colors cursor-pointer"
+          className="w-full mt-2 bg-navy hover:bg-navy/90 disabled:opacity-60 text-white text-sm font-medium py-3.5 px-6 rounded-full transition-colors cursor-pointer shadow-sm"
         >
           {loading ? "Signing in..." : "Sign in"}
         </button>
       </form>
 
       {/* Footer Link */}
-      <p className="text-center text-xs text-slate-500 mt-6">
+      <p className="text-center text-xs text-charcoal/70 mt-6">
         Don&apos;t have an account?{" "}
         <Link
           href="/signup"
-          className="font-semibold text-slate-900 hover:underline"
+          className="font-semibold text-navy hover:underline"
         >
           Create one
         </Link>
