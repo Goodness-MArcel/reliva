@@ -6,7 +6,7 @@ export default function StudyPermitDetailPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between font-sans">
       {/* Top Header */}
-      <header className="w-full flex items-center justify-between px-8 sm:px-14 py-7 border-b border-navy/10 bg-white/50 backdrop-blur-md">
+      <header className="w-full flex items-center justify-between px-6 sm:px-14 py-6 border-b border-navy/10 bg-white/50 backdrop-blur-md">
         <Link href="/" className="text-2xl font-bold tracking-tight text-navy">
           Reliva
         </Link>
@@ -20,11 +20,11 @@ export default function StudyPermitDetailPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 max-w-4xl w-full mx-auto px-6 py-12 space-y-8">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-6 sm:space-y-8">
         
         {/* Visa Header & Verified Badge */}
-        <div className="bg-white border border-navy/15 rounded-3xl p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)]">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        <div className="bg-white border border-navy/15 rounded-3xl p-6 sm:p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-confirm/10 text-confirm border border-confirm/30 w-fit">
               <CheckCircle2 className="w-3.5 h-3.5" />
               <span>Verified Active Pathway</span>
@@ -32,22 +32,22 @@ export default function StudyPermitDetailPage() {
             
             {/* Last Verified Date Note */}
             <div className="flex items-center gap-2 text-xs text-charcoal/60 bg-ivory px-3 py-1.5 rounded-xl border border-navy/10 w-fit">
-              <ShieldAlert className="w-3.5 h-3.5 text-gold" />
+              <ShieldAlert className="w-3.5 h-3.5 text-gold shrink-0" />
               <span>Reliva last verified this: <strong className="text-navy">November 2026</strong></span>
             </div>
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-navy">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy">
             Canada Study Permit
           </h1>
-          <p className="text-sm sm:text-base text-charcoal/70 mt-2 leading-relaxed">
+          <p className="text-xs sm:text-base text-charcoal/70 mt-2 leading-relaxed">
             A study permit is a document issued by Immigration, Refugees and Citizenship Canada (IRCC) that allows foreign nationals to study at designated learning institutions (DLIs) in Canada.
           </p>
 
           {/* Quick Metrics Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-navy/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 sm:mt-8 pt-6 border-t border-navy/10">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-ivory border border-navy/10 flex items-center justify-center text-navy">
+              <div className="w-10 h-10 rounded-xl bg-ivory border border-navy/10 flex items-center justify-center text-navy shrink-0">
                 <Clock className="w-4 h-4 text-gold" />
               </div>
               <div>
@@ -57,7 +57,7 @@ export default function StudyPermitDetailPage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-ivory border border-navy/10 flex items-center justify-center text-navy">
+              <div className="w-10 h-10 rounded-xl bg-ivory border border-navy/10 flex items-center justify-center text-navy shrink-0">
                 <DollarSign className="w-4 h-4 text-gold" />
               </div>
               <div>
@@ -69,12 +69,12 @@ export default function StudyPermitDetailPage() {
         </div>
 
         {/* Who Qualifies Section */}
-        <div className="bg-white border border-navy/15 rounded-3xl p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)] space-y-4">
-          <h2 className="text-lg font-bold text-navy flex items-center gap-2">
+        <div className="bg-white border border-navy/15 rounded-3xl p-6 sm:p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)] space-y-4">
+          <h2 className="text-base sm:text-lg font-bold text-navy flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-gold"></span>
             Who qualifies for it
           </h2>
-          <ul className="space-y-3 text-sm text-charcoal/80">
+          <ul className="space-y-3 text-xs sm:text-sm text-charcoal/80">
             <li className="flex items-start gap-3">
               <CheckCircle2 className="w-4 h-4 text-confirm shrink-0 mt-0.5" />
               <span>You have been accepted by a Designated Learning Institution (DLI) in Canada.</span>
@@ -95,8 +95,8 @@ export default function StudyPermitDetailPage() {
         </div>
 
         {/* Required Documents Section */}
-        <div className="bg-white border border-navy/15 rounded-3xl p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)] space-y-4">
-          <h2 className="text-lg font-bold text-navy flex items-center gap-2">
+        <div className="bg-white border border-navy/15 rounded-3xl p-6 sm:p-8 shadow-[0_4px_20px_rgba(11,37,69,0.03)] space-y-4">
+          <h2 className="text-base sm:text-lg font-bold text-navy flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-gold"></span>
             What documents you need to gather
           </h2>
@@ -118,10 +118,10 @@ export default function StudyPermitDetailPage() {
         </div>
 
         {/* Official Government Link Action Card */}
-        <div className="bg-navy text-white rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_6px_25px_rgba(11,37,69,0.15)]">
+        <div className="bg-navy text-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_6px_25px_rgba(11,37,69,0.15)]">
           <div>
-            <h3 className="text-lg font-bold text-white">Ready to apply officially?</h3>
-            <p className="text-xs text-white/70 mt-1 max-w-md">
+            <h3 className="text-base sm:text-lg font-bold text-white">Ready to apply officially?</h3>
+            <p className="text-xs text-white/70 mt-1 max-w-md leading-relaxed">
               Always review the primary source documentation directly through the official Government of Canada immigration portal.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function StudyPermitDetailPage() {
             href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-semibold text-xs py-3.5 px-6 rounded-full transition-colors shrink-0 shadow-sm"
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-semibold text-xs py-3.5 px-6 rounded-full transition-colors shrink-0 shadow-sm w-full sm:w-auto justify-center"
           >
             <span>Visit official IRCC portal</span>
             <ExternalLink className="w-3.5 h-3.5" />
@@ -139,7 +139,7 @@ export default function StudyPermitDetailPage() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 text-center border-t border-navy/10 bg-white/30">
+      <footer className="py-6 sm:py-8 text-center border-t border-navy/10 bg-white/30 px-4">
         <p className="text-xs text-charcoal/60">
           Visa information, verified and kept current by Reliva[cite: 2].
         </p>
