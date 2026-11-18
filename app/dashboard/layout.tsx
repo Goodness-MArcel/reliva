@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/AppSidebar";
 
@@ -24,12 +25,12 @@ export default function DashboardLayout({
               </span>
             </div>
 
-            <a
+            <Link
               href="/"
               className="text-xs font-medium px-4 py-2 rounded-full bg-white border border-navy/15 text-charcoal hover:bg-ivory hover:text-navy transition-colors shadow-2xs"
             >
               + New Country Search
-            </a>
+            </Link>
           </header>
 
           {/* Page Content */}

@@ -16,21 +16,47 @@ export default function SignInForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
-    setLoading(true);
 
-    const { error } = await authClient.signIn.email({
-      email,
-      password,
-    });
-
-    if (error) {
-      setErrorMsg(error.message || "Invalid email or password.");
-      setLoading(false);
+    // 1. Instant offline check
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      setErrorMsg("No internet connection. Please check your network and try again.");
       return;
     }
 
-    router.push("/dashboard");
-    router.refresh();
+    setLoading(true);
+
+    try {
+      const { data, error } = await authClient.signIn.email({
+        email,
+        password,
+      });
+
+      // 2. If Better Auth returns an error OR no user object came back, STOP here
+      if (error || !data?.user) {
+        const isServerOrNetworkError =
+          error?.status === 500 ||
+          error?.status === 0 ||
+          error?.message?.toLowerCase().includes("fetch") ||
+          error?.message?.toLowerCase().includes("network");
+
+        setErrorMsg(
+          isServerOrNetworkError
+            ? "Network error: Could not reach the server. Please check your connection and try again."
+            : error?.message || "Invalid email or password."
+        );
+        setLoading(false);
+        return;
+      }
+
+      // 3. Only redirect when we have verified user data
+      router.push("/dashboard");
+      router.refresh();
+    } catch {
+      setErrorMsg(
+        "Connection failed. Please check your internet connection and try again."
+      );
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,7 +73,7 @@ export default function SignInForm() {
 
       {/* Error Banner */}
       {errorMsg && (
-        <div className="mb-5 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-xs text-red-600 text-center">
+        <div className="mb-5 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-xs text-red-600 text-center leading-relaxed">
           {errorMsg}
         </div>
       )}

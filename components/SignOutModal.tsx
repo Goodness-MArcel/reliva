@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import {
@@ -21,18 +20,28 @@ interface SignOutModalProps {
 }
 
 export default function SignOutModal({ isOpen, onClose }: SignOutModalProps) {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const handleConfirmSignOut = async (e: React.MouseEvent) => {
-    // Prevent AlertDialogAction from closing the modal before signOut finishes
     e.preventDefault();
     setLoading(true);
-    await authClient.signOut();
-    setLoading(false);
-    onClose();
-    router.push("/signin");
-    router.refresh();
+
+    try {
+      await authClient.signOut({
+        fetchOptions: {
+          onSuccess: () => {
+            onClose();
+            // Hard redirect wipes Next.js client router cache & in-memory session state
+            window.location.href = "/signin";
+          },
+          onError: () => {
+            setLoading(false);
+          },
+        },
+      });
+    } catch {
+      setLoading(false);
+    }
   };
 
   return (

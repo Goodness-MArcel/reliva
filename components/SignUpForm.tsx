@@ -34,25 +34,47 @@ export default function SignUpForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
-    setLoading(true);
 
-    const { error } = await authClient.signUp.email({
-      email,
-      password,
-      name: fullName,
-      // @ts-expect-error - additional custom field configured in lib/auth.ts
-      passport,
-    });
-
-    if (error) {
-      setErrorMsg(error.message || "Something went wrong. Please try again.");
-      setLoading(false);
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      setErrorMsg("No internet connection. Please check your network and try again.");
       return;
     }
 
-    // Redirect to dashboard after successful registration
-    router.push("/dashboard");
-    router.refresh();
+    setLoading(true);
+
+    try {
+      const { data, error } = await authClient.signUp.email({
+        email,
+        password,
+        name: fullName,
+        // @ts-expect-error - additional custom field configured in lib/auth.ts
+        passport,
+      });
+
+      if (error || !data?.user) {
+        const isServerOrNetworkError =
+          error?.status === 500 ||
+          error?.status === 0 ||
+          error?.message?.toLowerCase().includes("fetch") ||
+          error?.message?.toLowerCase().includes("network");
+
+        setErrorMsg(
+          isServerOrNetworkError
+            ? "Network error: Could not reach the server. Please check your connection and try again."
+            : error?.message || "Something went wrong. Please try again."
+        );
+        setLoading(false);
+        return;
+      }
+
+      router.push("/dashboard");
+      router.refresh();
+    } catch {
+      setErrorMsg(
+        "Connection failed. Please check your internet connection and try again."
+      );
+      setLoading(false);
+    }
   };
 
   return (
@@ -69,7 +91,7 @@ export default function SignUpForm() {
 
       {/* Error Banner */}
       {errorMsg && (
-        <div className="mb-5 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-xs text-red-600 text-center">
+        <div className="mb-5 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-xs text-red-600 text-center leading-relaxed">
           {errorMsg}
         </div>
       )}
