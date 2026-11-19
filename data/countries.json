@@ -1,0 +1,354 @@
+[
+  {
+    "id": "ca",
+    "slug": "canada",
+    "name": "Canada",
+    "code": "CA",
+    "flagEmoji": "🇨🇦",
+    "region": "North America",
+    "capital": "Ottawa",
+    "currency": {
+      "code": "CAD",
+      "symbol": "$"
+    },
+    "languages": ["English", "French"],
+    "tagline": "Clear study-to-PR pathways and points-based skilled immigration.",
+    "overview": "Canada offers structured immigration routes through Designated Learning Institutions (DLIs), Post-Graduation Work Permits (PGWP), and the federal Express Entry system.",
+    "highlights": {
+      "avgProcessingTime": "8–16 weeks",
+      "postStudyWork": "Up to 3 years (PGWP)",
+      "prTimeline": "1–3 years after qualifying experience"
+    },
+    "lastVerified": "2026-11-19",
+    "officialImmigrationPortal": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
+    "pathways": [
+      {
+        "id": "ca-study-permit",
+        "slug": "study-permit",
+        "title": "Canada Study Permit",
+        "category": "Study",
+        "summary": "Study at a Designated Learning Institution (DLI) with part-time work rights and post-graduation work permit eligibility.",
+        "processingTime": "8–12 weeks",
+        "applicationFee": "CAD $150 (+ $85 biometrics)",
+        "duration": "Length of study program + 90 days",
+        "prEligible": true,
+        "requirements": [
+          "Letter of Acceptance (LOA) from a Canadian Designated Learning Institution (DLI)",
+          "Provincial or Territorial Attestation Letter (PAL/TAL) for most post-secondary programs",
+          "Proof of financial support covering tuition plus living expenses",
+          "Clean criminal record and immigration medical exam (if required)",
+          "Statement of Purpose explaining study goals and ties to home country"
+        ],
+        "documents": [
+          "Valid International Passport",
+          "DLI Letter of Acceptance",
+          "PAL / TAL Attestation Letter",
+          "Bank Statements / GIC / Sponsorship Proof",
+          "Academic Transcripts & English/French Test Results",
+          "Statement of Purpose (SOP)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Secure DLI Admission",
+            "description": "Apply to an eligible program at a Designated Learning Institution and receive your Letter of Acceptance."
+          },
+          {
+            "step": 2,
+            "title": "Obtain PAL/TAL & Gather Funds",
+            "description": "Request your Provincial Attestation Letter through your institution and prepare proof of tuition and living funds."
+          },
+          {
+            "step": 3,
+            "title": "Submit IRCC Application & Biometrics",
+            "description": "Create an IRCC portal account, upload supporting documents, pay fees, and complete biometrics at a VAC."
+          }
+        ],
+        "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
+      },
+      {
+        "id": "ca-express-entry",
+        "slug": "express-entry",
+        "title": "Express Entry (FSW / CEC)",
+        "category": "Permanent Residency",
+        "summary": "Points-based federal permanent residency system for skilled workers and Canadian graduates ranked via the CRS score.",
+        "processingTime": "6 months (standard target after ITA)",
+        "applicationFee": "CAD $1,590 (primary applicant)",
+        "duration": "Permanent",
+        "prEligible": true,
+        "requirements": [
+          "At least 1 year of continuous skilled work experience (NOC TEER 0, 1, 2, or 3)",
+          "Approved language test (IELTS, CELPIP, PTE Core, or TEF/TCF) meeting CLB 7+",
+          "Educational Credential Assessment (ECA) for foreign degrees",
+          "Competitive Comprehensive Ranking System (CRS) score or category-based eligibility (STEM, Healthcare, Trades, French, Education, Transport)"
+        ],
+        "documents": [
+          "Valid Passport",
+          "Language Test Results (less than 2 years old)",
+          "ECA Report (WES or equivalent)",
+          "Employment Reference Letters",
+          "Police Clearance Certificates & Medical Exam"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Complete Language Tests & ECA",
+            "description": "Take an approved English or French exam and get foreign academic credentials evaluated."
+          },
+          {
+            "step": 2,
+            "title": "Enter the Express Entry Pool",
+            "description": "Submit your online profile to receive your CRS score and enter federal draw rounds."
+          },
+          {
+            "step": 3,
+            "title": "Receive ITA & Submit PR Application",
+            "description": "Once invited, submit full documentation and fees within 60 days."
+          }
+        ],
+        "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "slug": "united-kingdom",
+    "name": "United Kingdom",
+    "code": "GB",
+    "flagEmoji": "🇬🇧",
+    "region": "Europe",
+    "capital": "London",
+    "currency": {
+      "code": "GBP",
+      "symbol": "£"
+    },
+    "languages": ["English"],
+    "tagline": "World-renowned universities with direct post-study and sponsored work routes.",
+    "overview": "The UK provides a streamlined points-based immigration system featuring the Student visa, the unsponsored Graduate Route, and the employer-sponsored Skilled Worker visa.",
+    "highlights": {
+      "avgProcessingTime": "3–8 weeks",
+      "postStudyWork": "2 years (apply by Dec 31, 2026) / 3 years (PhD)",
+      "prTimeline": "5 years on qualifying work routes"
+    },
+    "lastVerified": "2026-11-19",
+    "officialImmigrationPortal": "https://www.gov.uk/browse/visas-immigration",
+    "pathways": [
+      {
+        "id": "uk-graduate-visa",
+        "slug": "graduate-visa",
+        "title": "UK Graduate Visa (PSW)",
+        "category": "Work",
+        "summary": "Stay and work in the UK without employer sponsorship after completing an eligible UK bachelor's, master's, or doctoral degree.",
+        "processingTime": "Up to 8 weeks",
+        "applicationFee": "£937 (+ £1,035/year Immigration Health Surcharge)",
+        "duration": "2 years (applications by Dec 31, 2026) / 3 years (PhD)",
+        "prEligible": false,
+        "requirements": [
+          "Currently in the UK on a valid Student visa",
+          "Successfully completed an eligible UK degree at a compliant higher education provider",
+          "University has officially notified the Home Office of course completion"
+        ],
+        "documents": [
+          "Valid Passport",
+          "Confirmation of Acceptance for Studies (CAS) reference number",
+          "UKVI eVisa / BRP details",
+          "Sponsor consent letter (if government/scholarship funded in past 12 months)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Confirm University Completion Report",
+            "description": "Wait for your university to confirm to the Home Office that you passed your course."
+          },
+          {
+            "step": 2,
+            "title": "Verify Identity & Apply Online",
+            "description": "Use the UK Immigration ID Check app and submit your GOV.UK application before your Student visa expires."
+          },
+          {
+            "step": 3,
+            "title": "Receive eVisa & Start Working",
+            "description": "Work in any role or switch to a Skilled Worker visa once you secure sponsorship."
+          }
+        ],
+        "officialUrl": "https://www.gov.uk/graduate-visa"
+      },
+      {
+        "id": "uk-skilled-worker",
+        "slug": "skilled-worker-visa",
+        "title": "UK Skilled Worker Visa",
+        "category": "Work",
+        "summary": "Long-term employer-sponsored work visa leading to Indefinite Leave to Remain (ILR) after 5 years.",
+        "processingTime": "3–8 weeks",
+        "applicationFee": "£769–£1,519 (+ Immigration Health Surcharge)",
+        "duration": "Up to 5 years (renewable)",
+        "prEligible": true,
+        "requirements": [
+          "Confirmed job offer from a Home Office licensed sponsor",
+          "Certificate of Sponsorship (CoS) for an eligible RQF Level 6+ occupation",
+          "Salary meeting the general threshold (£41,700) or applicable going rate / new entrant discount",
+          "English language proficiency at CEFR B2 level"
+        ],
+        "documents": [
+          "Valid Passport",
+          "Certificate of Sponsorship (CoS) Reference Number",
+          "Proof of English Language (B2)",
+          "Criminal Record Certificate (for healthcare/education roles)",
+          "Proof of personal savings (unless certified by sponsor)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Secure Licensed Sponsor Offer",
+            "description": "Obtain a job offer from an approved UK employer who assigns your Certificate of Sponsorship."
+          },
+          {
+            "step": 2,
+            "title": "Submit Visa & IHS Payment",
+            "description": "Complete the online GOV.UK application and pay the visa fee and Immigration Health Surcharge."
+          },
+          {
+            "step": 3,
+            "title": "Complete Biometrics & Receive eVisa",
+            "description": "Verify your identity and receive digital eVisa status."
+          }
+        ],
+        "officialUrl": "https://www.gov.uk/skilled-worker-visa"
+      }
+    ]
+  },
+  {
+    "id": "de",
+    "slug": "germany",
+    "name": "Germany",
+    "code": "DE",
+    "flagEmoji": "🇩🇪",
+    "region": "Europe",
+    "capital": "Berlin",
+    "currency": {
+      "code": "EUR",
+      "symbol": "€"
+    },
+    "languages": ["German"],
+    "tagline": "Low-tuition higher education and flexible job-seeker immigration in Europe's largest economy.",
+    "overview": "Germany welcomes skilled professionals and students via the Chancenkarte (Opportunity Card), the EU Blue Card, and tuition-free public university programs.",
+    "highlights": {
+      "avgProcessingTime": "4–12 weeks",
+      "postStudyWork": "18-month job-seeker residence permit",
+      "prTimeline": "21–33 months (EU Blue Card)"
+    },
+    "lastVerified": "2026-11-19",
+    "officialImmigrationPortal": "https://www.make-it-in-germany.com/en/",
+    "pathways": [
+      {
+        "id": "de-opportunity-card",
+        "slug": "opportunity-card",
+        "title": "Opportunity Card (Chancenkarte)",
+        "category": "Job Seeker",
+        "summary": "Enter Germany for up to 12 months without a prior job offer to search for qualified employment while working part-time.",
+        "processingTime": "4–10 weeks",
+        "applicationFee": "€75",
+        "duration": "Up to 12 months",
+        "prEligible": true,
+        "requirements": [
+          "Recognized university degree or 2+ years of vocational training",
+          "Either full German qualification recognition OR at least 6 points on the Chancenkarte points scale",
+          "German A1 or English B2 proficiency (if applying via points route)",
+          "Proof of financial self-sufficiency (Blocked Account with ~€13,092/year or part-time contract)"
+        ],
+        "documents": [
+          "Valid Passport",
+          "Degree / Vocational Certificates & ZAB/Anabin Recognition",
+          "Blocked Account Confirmation (Sperrkonto)",
+          "Language Certificate (English B2 or German A1)",
+          "Health Insurance Coverage & CV"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Verify Degree Recognition",
+            "description": "Check your degree status on Anabin or apply for a ZAB Statement of Comparability."
+          },
+          {
+            "step": 2,
+            "title": "Fund Blocked Account",
+            "description": "Open a German blocked account showing sufficient funds for 12 months."
+          },
+          {
+            "step": 3,
+            "title": "Apply via Consular Services Portal",
+            "description": "Submit your application online and attend your local German embassy biometric appointment."
+          }
+        ],
+        "officialUrl": "https://www.make-it-in-germany.com/en/visa-residence/types/job-search-opportunity-card"
+      }
+    ]
+  },
+  {
+    "id": "au",
+    "slug": "australia",
+    "name": "Australia",
+    "code": "AU",
+    "flagEmoji": "🇦🇺",
+    "region": "Oceania",
+    "capital": "Canberra",
+    "currency": {
+      "code": "AUD",
+      "symbol": "$"
+    },
+    "languages": ["English"],
+    "tagline": "Points-tested permanent residency and high-demand employer sponsorship pathways.",
+    "overview": "Australia operates the SkillSelect Expression of Interest system for independent and state-nominated skilled migration alongside the Skills in Demand employer-sponsored visa.",
+    "highlights": {
+      "avgProcessingTime": "3–9 months",
+      "postStudyWork": "2–3 years (Subclass 485)",
+      "prTimeline": "Direct PR (Subclass 189/190) or 2–3 years via sponsorship"
+    },
+    "lastVerified": "2026-11-19",
+    "officialImmigrationPortal": "https://immi.homeaffairs.gov.au/",
+    "pathways": [
+      {
+        "id": "au-skilled-independent",
+        "slug": "skilled-independent-189",
+        "title": "Skilled Independent Visa (Subclass 189)",
+        "category": "Permanent Residency",
+        "summary": "Direct permanent residency for points-tested skilled workers without requiring employer or state sponsorship.",
+        "processingTime": "4–9 months",
+        "applicationFee": "AUD $4,770 (primary applicant)",
+        "duration": "Permanent",
+        "prEligible": true,
+        "requirements": [
+          "Occupation listed on Australia's eligible Skilled Occupation List",
+          "Positive Skills Assessment from the relevant assessing authority",
+          "Minimum 65 points on the SkillSelect points test (competitive rounds typically 80+)",
+          "Competent English proficiency and age under 45 at invitation"
+        ],
+        "documents": [
+          "Valid Passport",
+          "Positive Skills Assessment Outcome",
+          "English Language Test Results (IELTS/PTE)",
+          "Employment & Qualification Evidence",
+          "Police Clearances & Health Examination"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "title": "Complete Skills Assessment & English Test",
+            "description": "Obtain a positive skills assessment for your nominated occupation."
+          },
+          {
+            "step": 2,
+            "title": "Submit SkillSelect EOI",
+            "description": "Lodge an Expression of Interest in SkillSelect and wait for an invitation round."
+          },
+          {
+            "step": 3,
+            "title": "Lodge Visa Application in ImmiAccount",
+            "description": "Within 60 days of receiving an invitation, submit your full visa application and supporting evidence."
+          }
+        ],
+        "officialUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+      }
+    ]
+  }
+]

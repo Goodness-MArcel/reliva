@@ -18,6 +18,12 @@ export const auth = betterAuth({
         required: true,
         defaultValue: "Nigeria",
       },
+      role: {
+        type: "string",
+        required: false,
+        defaultValue: "user",
+        input: false, // Prevents users from setting themselves as admin on signup/update
+      },
     },
   },
   session: {
